@@ -25,7 +25,7 @@ Before you begin, ensure you have met the following requirements:
 1. Clone the repository:
     ```sh
     git clone https://github.com/NICxKMS/ETH_AVX_INTER_MOD_2.git
-    cd gametoken-dapp
+    cd ETH_AVX_INTER_MOD_2
     ```
 
 2. Install the dependencies:
