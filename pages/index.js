@@ -91,14 +91,6 @@ export default function HomePage() {
     }
   };
 
-  const redeem = async () => {
-    if (gameToken && redeemAmount > 0) {
-      let tx = await gameToken.redeem(account, redeemAmount);
-      await tx.wait();
-      getTotalSupply();
-      getBalance();
-    }
-  };
 
   const redeemItem = async () => {
     if (gameToken && redeemItemAmount > 0 && redeemItemName) {
@@ -150,15 +142,6 @@ export default function HomePage() {
             placeholder="Amount to recharge"
           />
           <button onClick={recharge}>Recharge</button>
-        </div>
-        <div>
-          <input
-            type="number"
-            value={redeemAmount}
-            onChange={(e) => setRedeemAmount(Number(e.target.value))}
-            placeholder="Amount to redeem"
-          />
-          <button onClick={redeem}>Redeem</button>
         </div>
         <div>
           <input

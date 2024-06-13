@@ -43,16 +43,7 @@ contract GameToken {
         assert(balance == previousBalance + _amount);
     }
 
-    function redeem(address _address, uint256 _amount) public {
-        require(_amount <= balances[_address], "Insufficient balance to redeem");
-        uint256 previousBalance = balance;
-        balances[_address] -= _amount;
-        totalSupply -= _amount;
-        balance -= _amount;
-        assert(balance == previousBalance - _amount);
-    }
-
-    function redeemItem(address _address, uint256 _amount, string memory _item) public {
+    function redeemItem(address _address, uint256 _amount /*, string memory _item */) public {
         require(_amount <= balances[_address], "Insufficient balance to redeem item");
         uint256 previousBalance = balance;
         balances[_address] -= _amount;

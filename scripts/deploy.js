@@ -7,7 +7,7 @@
 const hre = require("hardhat");
 
 async function main() {
-  const Assessment = await hre.ethers.getContractFactory("Assessment");
+  const Assessment = await hre.ethers.getContractFactory("GameToken");
   const assessment = await Assessment.deploy();
   await assessment.deployed();
 
