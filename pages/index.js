@@ -94,7 +94,7 @@ export default function HomePage() {
 
   const redeemItem = async () => {
     if (gameToken && redeemItemAmount > 0 && redeemItemName) {
-      let tx = await gameToken.redeemItem(account, redeemItemAmount, redeemItemName);
+      let tx = await gameToken.redeemItem(account, redeemItemAmount /*, redeemItemName */);
       await tx.wait();
       getTotalSupply();
       getBalance();
